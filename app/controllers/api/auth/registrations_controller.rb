@@ -1,4 +1,4 @@
-class Api::Auth::RegistrationsController < ApplicationController
+class Api::Auth::RegistrationsController < DeviseTokenAuth::RegistrationsController
   private
     def sign_up_parmas
       params.permit(:name, :email, :company, :password, :password_confirmation)
